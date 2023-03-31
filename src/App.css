@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
   pointer-events: none;
 }
 
@@ -29,7 +30,7 @@ h1 {
 
 .information {
   font-size: 17px;
-  width: 50%;
+  width: 400px;
 }
 
 .information a {
