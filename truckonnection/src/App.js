@@ -9,6 +9,9 @@ function App() {
         <h1>
           Under Construction
         </h1>
+        <p className="information">
+          For more information contact us at <a href="mailto:truckonnectionlogistics@gmail.com">truckonnectionlogistics@gmail.com</a>
+        </p>
       </header>
     </div>
   );
