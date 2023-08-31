@@ -1,0 +1,32 @@
+
+.header {
+    background: black;
+    .logo {
+        width: 200px;
+    }
+
+    .main-section {
+        position: relative;
+    }
+
+    .title {
+        font-size: 5.5em;
+    }
+
+    .active{
+        a{
+            color: black !important;
+        }
+        /* Change to the desired color */
+    }
+}
+
+@media (max-width: 1400px) {
+    .title {
+        font-size: 3em !important;
+        margin-top: 30%;
+    }
+}
+
+
+

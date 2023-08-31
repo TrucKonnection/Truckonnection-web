@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  transition: opacity 0.5s ease; /* Add a transition for opacity property */
+}
+
+/* Add your other styles here */
+
+/* Optional class to hide the header */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
