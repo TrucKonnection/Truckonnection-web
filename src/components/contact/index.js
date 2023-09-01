@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { ToastContainer, toast  } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Contact = () => {
     const [isFormValid, setIsFormValid] = useState(false);
@@ -31,18 +32,49 @@ const Contact = () => {
         setIsFormValid(allFieldsFilled);
     };
 
-    const handleEmail = (e) => {
+    const handleEmail = async (e) => {
         e.preventDefault();
 
-        const subject = encodeURIComponent('Contact Form Submission');
-        const body = encodeURIComponent(`Name: ${e.target.name.value}\nEmail: ${e.target.email.value}\nPhone number: ${e.target.mobile.value}\nMessage: ${e.target.message.value}`);
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const mobile = e.target.mobile.value;
+        const message = e.target.message.value;
+    
+        // Construct the email data object
+        const emailData = {
+            name,
+            email,
+            phone: mobile,
+            message,
+            subject: 'Contact Form Submission', // You can customize the subject here
+            body: `
+                <h2>New Contact Form Submission</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${mobile}</p>
+                <p><strong>Message:</strong> ${message}</p>
+            `, // HTML content for the email body
+        };
 
-        const mailtoLink = `mailto:dionte.johnson0407@gmail.com?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
-
-        toast.success('Email opened successfully!', {
-            position: toast.POSITION.TOP_RIGHT,
-          });
+        try {
+            await axios.post('/send-email', emailData);
+            toast.success('Email sent successfully!', {
+                position: toast.POSITION.TOP_RIGHT,
+            });
+            e.target.name.value = '';
+            e.target.email.value = '';
+            e.target.mobile.value = '';
+            e.target.message.value = '';
+        } catch (error) {
+            console.error('Error sending email:', error);
+            toast.error('Error sending email! ', {
+                position: toast.POSITION.TOP_RIGHT,
+            });
+            // e.target.name.value = '';
+            // e.target.email.value = '';
+            // e.target.mobile.value = '';
+            // e.target.message.value = '';
+        }
     };
 
     return (

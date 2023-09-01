@@ -10,7 +10,7 @@ import Footer from '../src/components/footer';
 function App() {
   const [showHeader, setShowHeader] = useState(true);
   const servicesSectionRef = useRef(null);
-  const [isServicesVisible, setServicesVisible] = useState(true);
+  const [isServicesVisible, setServicesVisible] = useState(false);
 
   const handleScroll = () => {
     if (servicesSectionRef.current) {
