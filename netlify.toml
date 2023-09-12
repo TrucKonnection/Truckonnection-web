@@ -2,3 +2,7 @@
   from = "/*"
   to = "public/index.html"
   status = 200
+
+[build]
+  functions = "server/functions"  # Specify the directory where your functions will be located
+

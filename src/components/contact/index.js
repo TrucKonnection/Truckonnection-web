@@ -157,7 +157,7 @@ const Contact = () => {
                     <div className="row gx-4 gx-lg-5 justify-content-center">
                         <div className="col-lg-4 text-center mb-5 mb-lg-0">
                             <i className="bi-envelope fs-2 mb-3 text-muted"></i>
-                            <div>1-855-329-2900 or <a href="mailto:truckonnectionlogistics@gmail.com">truckonnectionlogistics@gmail.com</a></div>
+                            <div>1-855-329-2900 or <a href="mailto:invoicing@truckonnectionlogistics.com">invoicing@truckonnectionlogistics.com</a></div>
                         </div>
                     </div>
                 </div>

@@ -2,13 +2,24 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors'); // Cross-Origin Resource Sharing
 const dotenv = require('dotenv');
+const serverless = require('serverless-http');
 
 const app = express();
 
 dotenv.config({ path: '../.env'});
 
+const router = express.Router();
+
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Parse JSON requests
+
+app.use('/.netlify/functions/server', router)
+
+router.post('/', async (req, res) => {
+	res.json({
+		'hello': 'Hello from Express'
+	})
+})
 
 // Endpoint to send email
 app.post('/send-email', async (req, res) => {

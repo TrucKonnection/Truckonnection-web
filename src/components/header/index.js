@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../assets/logo-no-bg.png';
+import logo from '../../assets/truckonnection-black.png';
 import image1 from '../../assets/truckonnection2.png';
 import image2 from '../../assets/skyscraper-truckonnection.png';
 import image3 from '../../assets/day-truckonnection.png';
