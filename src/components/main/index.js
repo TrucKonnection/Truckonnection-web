@@ -63,7 +63,7 @@ const Main = ({ servicesSectionRef }) => {
                         <div className="col-lg-3 col-md-6 text-center mobile">
                             <div className="mt-5">
                                 <div className="mb-2"><i className="bi-currency-dollar fs-1 text-primary"></i></div>
-                                <h3 className="h4 mb-2">Profitable Routes Towards Last</h3>
+                                <h3 className="h4 mb-2">Profitable Routes</h3>
                                 <p className="text-muted mb-0">Identifying and prioritizing routes that yield higher profits, leading to optimized and efficient transportation operations.</p>
                             </div>
                         </div>
