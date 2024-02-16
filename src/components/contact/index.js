@@ -91,7 +91,7 @@ const Contact = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    {/*  <div className="row gx-4 gx-lg-5 justify-content-center mb-5">
                         <div className="col-lg-6">
                             <form id="contactForm" onSubmit={handleEmail} onChange={handleFormValidity}>
                                 <div className="form-floating mb-3">
@@ -153,7 +153,7 @@ const Contact = () => {
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="row gx-4 gx-lg-5 justify-content-center">
                         <div className="col-lg-4 text-center mb-5 mb-lg-0">
                             <i className="bi-envelope fs-2 mb-3 text-muted"></i>
